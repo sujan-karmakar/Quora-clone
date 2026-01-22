@@ -1,0 +1,191 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --text-main: #e2e8f0;
+    --text-accent: #94a3b8;
+    --primary: #8b5cf6;
+    --secondary: #ec4899;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.15) 0px, transparent 50%);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+    text-shadow: 0 0 30px rgba(139, 92, 246, 0.2);
+}
+
+.posts-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.post {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--glow);
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+.user {
+    font-family: 'Poppins', sans-serif;
+    color: var(--secondary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.content {
+    color: var(--text-main);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.view-btn {
+    background-color: rgba(139, 92, 246, 0.2);
+    color: #a78bfa;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.view-btn:hover {
+    background-color: rgba(139, 92, 246, 0.4);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+}
+
+.edit-btn {
+    background-color: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.edit-btn:hover {
+    background-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+}
+
+.delete-form {
+    display: inline;
+}
+
+.delete-btn {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.delete-btn:hover {
+    background-color: rgba(239, 68, 68, 0.4);
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.2);
+}
+
+.create-btn {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    display: inline-flex;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+.create-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(236, 72, 153, 0.5);
+}
+
+/* Styles specifically for Show.ejs */
+.show-container {
+    max-width: 700px;
+}
+
+.post-id-label {
+    color: var(--text-accent);
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.post-id-label span {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.show-card {
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.show-card .content {
+    font-size: 1.2rem;
+}
+
+.back-btn {
+    color: var(--text-accent);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
