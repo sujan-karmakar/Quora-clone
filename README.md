@@ -56,14 +56,6 @@ A simple CRUD application built with Node.js and Express that mimics the core fu
 | **PATCH** | `/posts/:id` | Update - Logic to modify post content |
 | **DELETE** | `/posts/:id` | Destroy - Logic to remove a post |
 
-## 🎨 UI Highlights
-
-The project features a custom "Glassmorphism" aesthetic with:
--   Dark mode background (`#0f172a`)
--   Translucent cards with blur filters (`backdrop-filter`)
--   Gradual gradients and glow effects
--   Responsive grid layout
-
 ## 📝 Note
 
 Currently, this project uses **in-memory storage** (a JavaScript array) to store posts. This means all data will be reset if the server is restarted.
